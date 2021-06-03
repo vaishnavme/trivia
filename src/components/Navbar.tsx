@@ -53,4 +53,4 @@ export const Navbar = () => {
 }
 //left-0 show
 //-left-full hide
-const navStyle = "fixed top-0 h-full pt-4 px-4 pb-0 bg-gray-50 z-10 transition duration-400 ease-in-out hover:w-20"
+const navStyle = "fixed top-0 h-full pt-4 px-4 pb-0 bg-gray-50 z-10 overflow-hidden"
