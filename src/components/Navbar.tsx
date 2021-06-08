@@ -33,18 +33,18 @@ export const Navbar = () => {
                             <div className="grid gap-y-6">
                                 <NavLink to="/" className="flex items-center">
                                     <i className="bx bx-home text-xl"></i>
-                                    <span className="text-lg whitespace-nowrap font-medium ml-4">Home</span>
+                                    <span className="text-base whitespace-nowrap font-medium ml-4">Home</span>
                                 </NavLink>
                                 <NavLink to="/" className="flex items-center">
                                     <i className="bx bxs-dashboard text-xl"></i>
-                                    <span className="text-lg whitespace-nowrap font-medium ml-4">Dashboard</span>
+                                    <span className="text-base whitespace-nowrap font-medium ml-4">Dashboard</span>
                                 </NavLink>
                             </div>
                         </div>
                     </div>
                     <NavLink to="/" className="flex items-center">
                         <i className="bx bx-log-out text-lg"></i>
-                        <span className="text-lg whitespace-nowrap font-medium ml-4">Log Out</span>
+                        <span className="text-base whitespace-nowrap font-medium ml-4">Log Out</span>
                     </NavLink>
                 </nav>
             </div>
@@ -53,4 +53,4 @@ export const Navbar = () => {
 }
 //left-0 show
 //-left-full hide
-const navStyle = "fixed top-0 h-full pt-4 px-4 pb-0 bg-gray-50 z-10 overflow-hidden"
+const navStyle = "fixed top-0 h-full pt-4 px-4 pb-0 bg-gray-50 z-10 overflow-hidden transition-all duration-500 ease-in-out"
