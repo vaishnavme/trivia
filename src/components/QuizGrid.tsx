@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { useData } from "../context";
 
 export const QuizGrid = () => {
@@ -6,9 +7,11 @@ export const QuizGrid = () => {
         <div>
             {
                 allQuiz?.map((quiz) => (
-                    <div key={quiz.id} className="w-80">
-                        <img src={quiz.coverImageUrl} alt={quiz.name}/>
-                    </div>
+                    <Link key={quiz.id} to={`playzone/${quiz.id}`}>
+                        <div className="w-80">
+                            <img src={quiz.coverImageUrl} alt={quiz.name}/>
+                        </div>
+                    </Link>
                 ))
             }
         </div>
