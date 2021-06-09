@@ -15,6 +15,7 @@ export type Question = {
     points: number;
     negativePoints: number;
     options: Option[]
+    selectedOptionId?: string | null;
 }
 
 export type Quiz = {
@@ -27,4 +28,4 @@ export type Quiz = {
 
 export type ServerError = {
     message: string;
-  };
+};
