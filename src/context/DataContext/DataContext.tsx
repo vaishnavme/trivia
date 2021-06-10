@@ -4,7 +4,9 @@ import { dataReducer } from "./dataReducer";
 
 const initialState: InitialState = {
     allQuiz : [],
-    score: 0
+    currentQuiz: null,
+    questionNo: 0,
+    score: 0,
 }
 
 const DataContext = createContext<DataContextType>({} as DataContextType);
