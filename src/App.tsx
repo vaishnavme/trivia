@@ -1,5 +1,5 @@
 import { Routes, Route } from "react-router-dom";
-import { Home, Playzone } from "./pages";
+import { Home, Playzone, Result } from "./pages";
 import { Navbar } from "./components";
 import React from "react";
 
@@ -11,6 +11,7 @@ function App() {
                 <Routes>
                     <Route path="/" element={<Home/>}/>
                     <Route path="/playzone/:quizID" element={<Playzone/>}/>
+                    <Route path="/result" element={<Result/>}/>
                 </Routes>
             </div>
         </div>
