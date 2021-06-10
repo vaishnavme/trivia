@@ -1,5 +1,5 @@
 import React from "react";
-import { Quiz } from "./Quiz.type";
+import { Option, Quiz } from "./Quiz.type";
 
 export type InitialState = {
     allQuiz: Quiz[];
@@ -16,4 +16,7 @@ export type DataContextType = {
 export type Action = 
     | { type: "SET_ALL_QUIZ", payload: Quiz[] }
     | { type: "SET_CURRENT_QUIZ", payload: {quizID: string}}
+    | { type: "SET_SELECTED_ANSWER", payload: {optionID: string, questionID: string}}
     | { type: "NEXT_QUESTION" }
+    | { type: "INCREMENT_SCORE", payload: {score: number}}
+    | { type: "DECREMENT_SCORE", payload: {score: number}}
