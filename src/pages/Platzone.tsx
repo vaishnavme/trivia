@@ -7,7 +7,6 @@ export default function Playzone() {
     const { quizID } = useParams();
     const navigate = useNavigate();
     const { state: {currentQuiz, questionNo, score}, dispatch } = useData();
-
     const currentQuestion = currentQuiz?.questions[questionNo];
 
     const scoreAndQuestionHandler = (option : Option) => {
@@ -40,24 +39,20 @@ export default function Playzone() {
     useEffect(() => {
         dispatch({type:"SET_CURRENT_QUIZ", payload: {quizID}})
     }, [])
-    console.table({
-        quesno: questionNo,
-        length: currentQuiz?.questions.length
-    })
-
+    
     return (
-        <div className="m-auto min-h-screen w-full max-w-2xl">
+        <div className="m-auto w-full max-w-2xl">
             <h1 className="text-2xl font-medium">{score}</h1>
             <h1 className="text-2xl">{currentQuiz?.name}</h1>
             <div>
-                <h1 className="text-xl font-medium">{currentQuestion?.question}</h1>
-                <div>
+                <h1 className="text-xl font-medium p-2">{currentQuestion?.question}</h1>
+                <div className="grid grid-flow-col grid-cols-2 grid-rows-2 gap-x-1 gap-y-0.5">
                     {
                         currentQuestion?.options.map((option) => (
                             <button 
                                 key={option.id}
                                 onClick={() => optionHandler(option)}
-                                className="block text-lg bg-gray-500 w-80 p-4 m-4 rounded-md shadow-md">
+                                className="block text-lg bg-white w-80 p-4 mx-1 my-2 rounded-md shadow ">
                                 {option.content}
                             </button>
                         ))
