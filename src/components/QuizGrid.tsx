@@ -4,12 +4,16 @@ import { useData } from "../context";
 export const QuizGrid = () => {
     const {state: {allQuiz}} = useData();
     return (
-        <div>
+        <div className="grid grid-flow-col gap-4">
             {
                 allQuiz?.map((quiz) => (
-                    <Link key={quiz.id} to={`playzone/${quiz.id}`}>
-                        <div className="w-80">
+                    <Link 
+                        key={quiz.id} to={`playzone/${quiz.id}`}>
+                        <div className="w-96 bg-white shadow-md rounded-xl overflow-hidden">
                             <img src={quiz.coverImageUrl} alt={quiz.name}/>
+                            <div className="p-4">
+                                <h1 className="text-lg">{quiz.name}</h1>
+                            </div>
                         </div>
                     </Link>
                 ))
