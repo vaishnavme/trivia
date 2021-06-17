@@ -8,7 +8,7 @@ export const QuizGrid = () => {
             {
                 allQuiz?.map((quiz) => (
                     <Link 
-                        key={quiz.id} to={`playzone/${quiz.id}`}>
+                        key={quiz._id} to={`playzone/${quiz._id}`}>
                         <div className="w-96 bg-white shadow-md rounded-xl overflow-hidden">
                             <img src={quiz.coverImageUrl} alt={quiz.name}/>
                             <div className="p-4">

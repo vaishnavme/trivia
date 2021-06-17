@@ -11,7 +11,7 @@ export const dataReducer = (state: InitialState, action: Action) => {
 
         case "SET_CURRENT_QUIZ":
             const {quizID}  = action.payload;
-            const selectedQuiz = state.allQuiz.find((quiz) => quiz.id === quizID) as Quiz;
+            const selectedQuiz = state.allQuiz.find((quiz) => quiz._id === quizID) as Quiz;
             return {
                 ...state,
                 currentQuiz: selectedQuiz
@@ -24,7 +24,7 @@ export const dataReducer = (state: InitialState, action: Action) => {
                 currentQuiz: {
                     ...state.currentQuiz,
                     questions: state.currentQuiz?.questions.map((question) => {
-                        return question.id === questionID ? {
+                        return question._id === questionID ? {
                             ...question,
                             selectedOption: optionID
                         } : question

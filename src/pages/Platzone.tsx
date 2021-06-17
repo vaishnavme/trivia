@@ -31,7 +31,7 @@ export default function Playzone() {
     const optionHandler = (option: Option) => {
         dispatch({
             type: "SET_SELECTED_ANSWER", 
-            payload: {optionID: option.id, questionID: currentQuestion?.id}
+            payload: {optionID: option._id, questionID: currentQuestion?._id}
         })
         scoreAndQuestionHandler(option)
     }
@@ -50,7 +50,7 @@ export default function Playzone() {
                     {
                         currentQuestion?.options.map((option) => (
                             <button 
-                                key={option.id}
+                                key={option._id}
                                 onClick={() => optionHandler(option)}
                                 className="block text-lg bg-white w-80 p-4 mx-1 my-2 rounded-md shadow ">
                                 {option.content}

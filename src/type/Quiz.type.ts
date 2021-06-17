@@ -1,16 +1,16 @@
 export type ResponseData = {
     success: boolean;
-    allQuizzes: Quiz;
+    quizdata: Quiz;
 }
 
 export type Option = {
-    id: string;
+    _id: string;
     content: string;
     isAnswer: boolean
 }
 
 export type Question = {
-    id: string;
+    _id: string;
     question: string;
     points: number;
     negativePoints: number;
@@ -19,7 +19,7 @@ export type Question = {
 }
 
 export type Quiz = {
-    id: string;
+    _id: string;
     name: string;
     coverImageUrl: string;
     totolScore: 50;
