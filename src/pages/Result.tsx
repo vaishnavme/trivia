@@ -8,15 +8,25 @@ export default function Result() {
     const showResponse = () => setVisible(prevState => !prevState)
 
     return (
-        <div>
-            <img className="object-fill h-96" src={currentQuiz?.coverImageUrl} alt={currentQuiz?.name}/>
-            <div className="m-auto w-full max-w-2xl">
-                <h1 className="text-2xl font-medium">{currentQuiz?.name}</h1>
-                <button 
-                    onClick={() => showResponse()}
-                    className="flex align-center justify-center bg-white shadow p-1 block text-lg w-full">View Result 
-                    <i className={`bx ${isVisible ? "bxs-chevron-up" : "bxs-chevron-down" }  text-2xl`}></i>
-                </button>
+        <div className="m-auto w-full max-w-2xl">
+            <div className="relative">
+                <img className="m-auto md:h-96 " src={currentQuiz?.coverImageUrl} alt={currentQuiz?.name}/>
+                <div className="absolute inset-0">
+                    <div className="w-2xl h-full bg-white bg-opacity-10 backdrop-filter backdrop-blur-sm">
+                        <div className="flex items-center content-center justify-center h-full flex-col">
+                            <h1 className="font-bold text-4xl text-white">{currentQuiz?.name}</h1>
+                            <h1 className="font-bold text-8xl text-white">{score}</h1>
+                            <h1 className="text-2xl text-white font-semibold">Your Score</h1>
+                        </div>
+                    </div>
+                </div>
+            </div>
+          
+            <button 
+                onClick={() => showResponse()}
+                className="flex align-center justify-center bg-white shadow p-1 block text-lg w-full my-4">View Result 
+                <i className={`bx ${isVisible ? "bxs-chevron-up" : "bxs-chevron-down" }  text-2xl`}></i>
+            </button>
             
             {
                 isVisible &&
@@ -41,7 +51,6 @@ export default function Result() {
                 }
                 </div>
             }
-            </div>
         </div>
     )
 }
