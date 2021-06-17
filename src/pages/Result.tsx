@@ -25,7 +25,7 @@ export default function Result() {
                     currentQuiz?.questions.map((question) => (
                         <div className="my-8" key={question._id}>
                             <h1 className="text-lg font-semibold">{question.question}</h1>
-                            <div className="grid grid-flow-col grid-cols-2 grid-rows-2 gap-x-1 gap-y-0.5">
+                            <div className="md:grid md:grid-flow-col md:grid-cols-2 md:grid-rows-2 md:gap-x-1 md:gap-y-0.5 flex flex-wrap flex-col">
                                 {question.options.map((option) => (
                                     <div 
                                         className={`block text-lg bg-white w-80 p-4 mx-1 my-2 rounded-md shadow 
