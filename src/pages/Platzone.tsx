@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import { useData } from "../context";
-import { Option, Question } from "../type/Quiz.type";
+import { Option } from "../type/Quiz.type";
 
 export default function Playzone() {
     const { quizID } = useParams();
@@ -38,7 +38,7 @@ export default function Playzone() {
 
     useEffect(() => {
         dispatch({type:"SET_CURRENT_QUIZ", payload: {quizID}})
-    }, [])
+    }, [dispatch, quizID])
     
     return (
         <div className="m-auto w-full max-w-2xl">

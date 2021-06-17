@@ -12,4 +12,4 @@ export async function getQuizData(): Promise<ResponseData | any> {
     }
 }
 
-//https://143fba6b-1de5-4c69-b570-9cc6c221791b.mock.pstmn.io
+
