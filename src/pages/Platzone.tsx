@@ -46,7 +46,7 @@ export default function Playzone() {
             <h1 className="text-2xl">{currentQuiz?.name}</h1>
             <div>
                 <h1 className="text-xl font-medium p-2">{currentQuestion?.question}</h1>
-                <div className="grid grid-flow-col grid-cols-2 grid-rows-2 gap-x-1 gap-y-0.5">
+                <div className="md:grid md:grid-flow-col md:grid-cols-2 md:grid-rows-2 md:gap-x-1 md:gap-y-0.5 flex flex-wrap flex-col">
                     {
                         currentQuestion?.options.map((option) => (
                             <button 
