@@ -1,4 +1,3 @@
-import { stat } from "fs";
 import { Action, InitialState } from "../../type/Context.type";
 import { initialState } from "./DataContext";
 import { Quiz } from "../../type/Quiz.type";

@@ -1,5 +1,5 @@
 import React from "react";
-import { Option, Quiz } from "./Quiz.type";
+import { Quiz } from "./Quiz.type";
 
 export type InitialState = {
     allQuiz: Quiz[];
