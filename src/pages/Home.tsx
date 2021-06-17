@@ -9,7 +9,6 @@ export default function Home() {
     const get = async() => {
         const quizData = await getQuizData(); 
         dispatch({type: "SET_ALL_QUIZ", payload: quizData});
-        console.log( "quiz", quizData)
     }
     useEffect(() => {
         get();
