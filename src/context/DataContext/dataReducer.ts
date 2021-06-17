@@ -1,5 +1,6 @@
 import { stat } from "fs";
 import { Action, InitialState } from "../../type/Context.type";
+import { initialState } from "./DataContext";
 import { Quiz } from "../../type/Quiz.type";
 
 export const dataReducer = (state: InitialState, action: Action) => {
@@ -54,9 +55,8 @@ export const dataReducer = (state: InitialState, action: Action) => {
 
         case "RESET":
             return {
-                ...state, 
+                ...initialState, 
                 allQuiz: state.allQuiz,
-                score: 0
             }
 
         default: 

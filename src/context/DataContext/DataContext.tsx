@@ -2,7 +2,7 @@ import React, { createContext, useContext, useReducer } from "react";
 import { InitialState, DataContextType } from "../../type/Context.type";
 import { dataReducer } from "./dataReducer";
 
-const initialState: InitialState = {
+export const initialState: InitialState = {
     allQuiz : [],
     currentQuiz: null,
     questionNo: 0,

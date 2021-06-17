@@ -29,7 +29,7 @@ export default function Result() {
                                 {question.options.map((option) => (
                                     <div 
                                         className={`block text-lg bg-white w-80 p-4 mx-1 my-2 rounded-md shadow 
-                                            ${option.isAnswer && "bg-green-500"} ${option._id === question.selectedOption && "bg-red-500"}`
+                                            ${option.isAnswer && "bg-green-600 text-white"} ${option._id === question.selectedOption && "bg-red-600 text-white"}`
                                         }
                                         key={option._id}
                                         >{option.content}
