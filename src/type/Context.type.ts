@@ -21,4 +21,3 @@ export type Action =
     | { type: "INCREMENT_SCORE", payload: {score: number}}
     | { type: "DECREMENT_SCORE", payload: {score: number}}
     | { type: "RESET" }
-    | { type: "RESET_SCORE" }
