@@ -20,3 +20,5 @@ export type Action =
     | { type: "NEXT_QUESTION" }
     | { type: "INCREMENT_SCORE", payload: {score: number}}
     | { type: "DECREMENT_SCORE", payload: {score: number}}
+    | { type: "RESET" }
+    | { type: "RESET_SCORE" }

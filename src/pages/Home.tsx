@@ -13,6 +13,7 @@ export default function Home() {
     }
     useEffect(() => {
         get();
+        dispatch({type: "RESET"});
     },[]);
     
     return (

@@ -31,7 +31,6 @@ export const dataReducer = (state: InitialState, action: Action) => {
                     })
                 } as Quiz
             }
-            return state
         
         case "NEXT_QUESTION": 
             return {
@@ -51,6 +50,13 @@ export const dataReducer = (state: InitialState, action: Action) => {
             return {
                 ...state,
                 score: state.score - action.payload.score
+            }
+
+        case "RESET":
+            return {
+                ...state, 
+                allQuiz: state.allQuiz,
+                score: 0
             }
 
         default: 
