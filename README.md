@@ -2,7 +2,7 @@
 
 #### [Live](https://trivia-git-develop-vaishnavme.vercel.app/)  [https://trivia-git-develop-vaishnavme.vercel.app/](https://trivia-git-develop-vaishnavme.vercel.app/)
 
-Quiz app - ReacJs project to try hands on TypeScript
+Quiz app - ReactJs project to try hands on TypeScript
 
 ### Frontend
 
