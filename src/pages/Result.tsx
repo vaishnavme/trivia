@@ -1,9 +1,12 @@
 import { useState } from "react";
+import { useNavigate } from "react-router";
 import { useData } from "../context";
 
 export default function Result() {
     const [isVisible, setVisible] = useState(false);
     const {state: {currentQuiz, score}} = useData();
+
+    const navigate = useNavigate()
 
     const showResponse = () => setVisible(prevState => !prevState)
 
@@ -17,6 +20,7 @@ export default function Result() {
                             <h1 className="font-bold text-4xl text-white">{currentQuiz?.name}</h1>
                             <h1 className="font-bold text-8xl text-white">{score}</h1>
                             <h1 className="text-2xl text-white font-semibold">Your Score</h1>
+                            <button onClick={() => navigate("/")} className="bg-white text-black font-semibold px-2">Home</button>
                         </div>
                     </div>
                 </div>
