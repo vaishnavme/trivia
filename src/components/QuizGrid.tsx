@@ -17,7 +17,7 @@ export const QuizGrid = () => {
             {allQuiz?.map((quiz, index) => (
                 <Link key={quiz._id} to={`playzone/${quiz._id}`}>
                     <div
-                        className={`${colorArray[index]} text-white rounded-md max-w-md p-6 my-2 shadow-xl`}
+                        className={`${colorArray[index]} text-white rounded-md h-44 max-w-md p-6 mb-10 shadow-xl`}
                     >
                         <span className="border-2 py-1 px-2 rounded-xl w-max flex items-center justify-center">
                             <i className="bx bxl-play-store text-lg"></i>
