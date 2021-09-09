@@ -3,8 +3,6 @@ import { initialState } from './DataContext';
 import { Quiz } from '../../type/Quiz.type';
 
 export const dataReducer = (state: InitialState, action: Action) => {
-    // console.log("State: ", state);
-    // console.log("Action: ", action);
     switch (action.type) {
         case 'SET_ALL_QUIZ':
             return { ...state, allQuiz: action.payload };

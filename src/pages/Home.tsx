@@ -1,9 +1,8 @@
-import { Dashboard, QuizGrid } from '../components';
+import { QuizGrid } from '../components';
 
 export default function Home() {
     return (
         <div className="flex">
-            <Dashboard />
             <QuizGrid />
         </div>
     );
