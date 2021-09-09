@@ -5,44 +5,26 @@ import { useData } from '../context';
 export default function Result() {
     const [isVisible, setVisible] = useState(false);
     const {
-        state: { currentQuiz, score }
+        state: { currentQuiz, score },
+        dispatch
     } = useData();
 
     const navigate = useNavigate();
+
+    const playAgainHandler = () => {
+        dispatch({ type: 'RESET' });
+        navigate('/');
+    };
 
     const showResponse = () => setVisible((prevState) => !prevState);
 
     return (
         <div className="m-auto w-full max-w-2xl">
-            <div className="relative">
-                <img
-                    className="m-auto md:h-96 "
-                    src={currentQuiz?.coverImageUrl}
-                    alt={currentQuiz?.name}
-                />
-                <div className="absolute inset-0">
-                    <div className="w-2xl h-full bg-white bg-opacity-10 backdrop-filter backdrop-blur-sm">
-                        <div className="flex items-center content-center justify-center h-full flex-col">
-                            <h1 className="font-bold text-4xl text-white">
-                                {currentQuiz?.name}
-                            </h1>
-                            <h1 className="font-bold text-8xl text-white">
-                                {score}
-                            </h1>
-                            <h1 className="text-2xl text-white font-semibold">
-                                Your Score
-                            </h1>
-                            <button
-                                onClick={() => navigate('/')}
-                                className="bg-white text-black font-semibold px-2"
-                            >
-                                Home
-                            </button>
-                        </div>
-                    </div>
-                </div>
+            <div className="bg-gradient-to-r from-green-400 to-blue-500 rounded-md text-white p-3 text-center">
+                <h1 className="text-3xl">{currentQuiz?.name}</h1>
+                <span className="text-6xl font-semibold my-4">{score}</span>
+                <p>You Score</p>
             </div>
-
             <button
                 onClick={() => showResponse()}
                 className="flex align-center justify-center bg-white shadow p-1 block text-lg w-full my-4"
@@ -53,6 +35,12 @@ export default function Result() {
                         isVisible ? 'bxs-chevron-up' : 'bxs-chevron-down'
                     }  text-2xl`}
                 ></i>
+            </button>
+            <button
+                onClick={() => playAgainHandler()}
+                className="flex align-center justify-center bg-white shadow p-1 block text-lg w-full my-4"
+            >
+                Play Again
             </button>
 
             {isVisible && (
