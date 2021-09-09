@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
 import { getQuizData } from '../service/getData';
-import { QuizGrid } from '../components';
+import { Dashboard, QuizGrid } from '../components';
 import { useData } from '../context';
 
 export default function Home() {
@@ -17,7 +17,8 @@ export default function Home() {
     }, []);
 
     return (
-        <div>
+        <div className="flex">
+            <Dashboard />
             <QuizGrid />
         </div>
     );

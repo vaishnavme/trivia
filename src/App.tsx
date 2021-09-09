@@ -6,7 +6,7 @@ function App() {
     return (
         <div>
             <Navbar />
-            <div className="p-4 mt-16 md:ml-20">
+            <div className="p-4">
                 <Routes>
                     <Route path="/" element={<Home />} />
                     <Route path="/playzone/:quizID" element={<Playzone />} />

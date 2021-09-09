@@ -5,17 +5,26 @@ export const QuizGrid = () => {
     const {
         state: { allQuiz }
     } = useData();
+
+    const colorArray = [
+        'bg-gradient-to-r from-yellow-200 via-green-300 to-green-400',
+        'bg-gradient-to-r from-purple-400 via-pink-500 to-red-500',
+        'bg-gradient-to-r from-green-400 to-blue-500'
+    ];
+
     return (
-        <div className="md:grid md:grid-flow-col md:gap-4 flex flex-wrap flex-col">
-            {allQuiz?.map((quiz) => (
+        <div>
+            {allQuiz?.map((quiz, index) => (
                 <Link key={quiz._id} to={`playzone/${quiz._id}`}>
-                    <div className="w-full h-72 bg-white shadow-md rounded overflow-hidden my-4 md:w-96 md:m-2">
-                        <img src={quiz.coverImageUrl} alt={quiz.name} />
-                        <div className="p-4">
-                            <h1 className="text-xl font-semibold">
-                                {quiz.name}
-                            </h1>
-                        </div>
+                    <div
+                        className={`${colorArray[index]} text-white rounded-md max-w-md p-6 my-2 shadow-xl`}
+                    >
+                        <span className="border-2 py-1 px-2 rounded-xl w-max flex items-center justify-center">
+                            <i className="bx bxl-play-store text-lg"></i>
+                        </span>
+                        <h1 className="text-xl font-medium my-2">
+                            {quiz.name}
+                        </h1>
                     </div>
                 </Link>
             ))}
