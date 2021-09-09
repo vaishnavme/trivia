@@ -1,1 +1,1 @@
-export { QuizGrid } from "./QuizGrid";
+export { QuizGrid } from './QuizGrid';
