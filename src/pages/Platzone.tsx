@@ -40,7 +40,7 @@ export default function Playzone() {
     }, [dispatch, quizID]);
 
     return (
-        <div className="m-auto w-full max-w-2xl">
+        <div className="m-auto w-full max-w-2xl p-2">
             <h1 className="text-2xl text-center">{currentQuiz?.name}</h1>
             <div className="font-medium text-gray-600">
                 <span className="text-2xl text-black">{questionNo + 1}</span>/
